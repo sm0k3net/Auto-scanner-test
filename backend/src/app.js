@@ -9,10 +9,19 @@ const config = require('./config/config.json');
 
 const app = express();
 
-app.use(cors({ origin: true, credentials: true }));
+// Важно: явно указываем origin фронтенда для корректной работы сессий!
+app.use(cors({
+  origin: 'http://localhost:8080',
+  credentials: true
+}));
+
 app.use(bodyParser.json());
 app.use(morgan('dev'));
-app.use(session({ secret: config.sessionSecret, resave: false, saveUninitialized: false }));
+app.use(session({
+  secret: config.sessionSecret,
+  resave: false,
+  saveUninitialized: false
+}));
 
 app.use('/api', routes);
 
