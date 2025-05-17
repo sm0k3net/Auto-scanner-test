@@ -1,0 +1,16 @@
+{
+  "sessionSecret": "pentest_secret",
+  "nmapPath": "nmap",
+  "zapApi": "http://localhost:8081",
+  "wpscanPath": "wpscan",
+  "searchsploitPath": "searchsploit",
+  "shodanApiKey": "YOUR_SHODAN_API_KEY",
+  "virustotalApiKey": "YOUR_VIRUSTOTAL_API_KEY",
+  "smtp": {
+    "host": "smtp.example.com",
+    "port": 587,
+    "secure": false,
+    "user": "user@example.com",
+    "pass": "password"
+  }
+}
