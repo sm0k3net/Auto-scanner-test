@@ -6,8 +6,6 @@ services:
       dockerfile: docker/Dockerfile
     ports:
       - "3001:3001"
-    volumes:
-      - ../backend:/app/backend
     environment:
       - NODE_ENV=production
   frontend:
